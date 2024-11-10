@@ -1,0 +1,486 @@
+<html>
+  <head>
+    <title>Tae</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      html {
+  scroll-behavior: smooth;
+}
+
+
+      .banner {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)),
+          url("/school_practice/Background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .navbar {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        margin-top: 30px;
+        width: 140px;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-left: 20px;
+        border-radius: 5px;
+      }
+      .logo:hover {
+        transform: scale(1.1);
+      }
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        margin-right: 20px;
+      }
+
+      .navbar ul div {
+        margin: 0 20px;
+        position: relative;
+      }
+
+      .navbar ul div a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .navbar ul div::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+
+      .navbar ul div:hover::after {
+        width: 100%;
+      }
+
+      .content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+      }
+
+      .content h1 {
+        font-size: 50px;
+        margin-top: 80px;
+      }
+
+      .content p {
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+      }
+
+      /* Contact Section Styles */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f9fafb;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-description {
+  font-size: 18px;
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  text-align: left;
+  margin-left: 120px;
+  gap: 200px;
+}
+
+.contact-info {
+  flex-basis: 30%;
+}
+
+.contact-info h3 {
+  font-size: 22px;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #34495e;
+}
+
+.contact-info a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media h3 {
+  font-size: 22px;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.social-link {
+  font-size: 18px;
+  color: #34495e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #2980b9;
+}
+
+
+      button {
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid white;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .title-text,
+      .section-3-how-it-works-start {
+        margin: 0 auto;
+        padding: 55px 40px;
+        text-align: center;
+        padding-bottom: 70px;
+        background-color: rgb(241, 240, 240);
+      }
+
+      .section-3-how-it-works-start {
+        background-color: rgb(255, 255, 255);
+        height: 850px;
+      }
+
+      .tae {
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: bold;
+        max-width: 700px;
+        padding: 15px 20px;
+      }
+
+      .title-text-lower-child-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+        gap: 20px;
+      }
+
+      .title-text-lower-child-div div,
+      .contentworks {
+        padding: 20px;
+        flex: 1;
+        border-radius: 10px;
+        background-color: #dedbdbb3;
+      }
+
+      .title-text-lower-child-div span {
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+      }
+
+      .title-text-lower-child-div h5 {
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+
+      .section-3-how-it-works-start .steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .section-3-how-it-works-start {
+        flex-direction: column;
+      }
+
+      .steps .step {
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .section-3-how-it-works-start h2 {
+        margin-top: -20px;
+        margin-bottom: 20px;
+      }
+
+      .step {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 230px;
+      }
+
+      .step4 {
+        margin-top: 200px;
+      }
+
+      .logo2 {
+        width: 500px;
+      }
+      .contentworks {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 700px;
+        background-color: #fff;
+        gap: 20px;
+        margin-left: 20px;
+        margin-top: 100px;
+      }
+
+      .contentworks p {
+        gap: 50px;
+        width: 400;
+      }
+
+      .section-3-how-it-works-start {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+      }
+      .contentworks h3 {
+        font-size: 40px;
+      }
+
+      .metch {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 40px;
+      }
+      .button2 {
+        color: rgb(255, 255, 255);
+        background-color: black;
+      }
+
+      .step3 {
+        margin-bottom: 100px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .title-text-lower-child-div {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="banner">
+      <div class="navbar">
+        <img src="logo.png" class="logo" />
+        <ul>
+          <div><a href="#">Home</a></div>
+          <div><a href="#aboutus">About Us</a></div>
+          <div><a href="#campuses">Campuses</a></div>
+          <div><a href="#">Contact</a></div>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h1>Welcome to Lyceum of the Philippines University</h1>
+        <p>Explore our campuses, academic programs, and vibrant community.</p>
+
+        </p>
+        <div>
+          <button type="button">Get Started</button>
+        </div>
+      </div>
+    </main>
+
+    <section class="title-text" id="aboutus">
+      <div>
+        <img src="logo.png" class="logo" />
+        <p class="tae">
+          Welcome to <strong>Lyceum of the Philippines University (LPU)</strong>, your gateway to exploring our campuses, discovering academic opportunities, and connecting with our vibrant community.
+
+        </p>
+      </div>
+      <div class="title-text-lower-child-div">
+        <div>
+          <span>🏛</span>
+          <h5>Official Source</h5>
+          <p>A autonomous school until 2027</p>
+        </div>
+
+        <div>
+          <span>🔒</span>
+          <h5>Secure and Reliable</h5>
+          <p>Built for data privacy and integrity.</p>
+        </div>
+
+        <div>
+          <span>⚡</span>
+          <h5>Enrollment speed</h5>
+          <p>Convenient enrollment, anytime and anywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-3-how-it-works-start" id="campuses" >
+      <h2 class="metch">Campuses</h2>
+
+      <div class="step step1">
+        <div>
+          <img
+            src="Background.jpg"
+            alt=""
+            class="logo2 logo"
+          />
+        </div>
+        <div class="contentworks">
+          <h3>LPU Manila</h3>
+          <p>The heart of LPU, located in Manila, offering diverse programs and experiences.</p>
+
+          <button type="button" class="button2">Get Started</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="contentworks">
+          <h3>LPU Cavite</h3>
+          <p>A modern campus with state-of-the-art facilities, located in Cavite.</p>
+
+          <button type="button" class="button2">Get Started</button>
+        </div>
+        <div>
+          <img src="lpuc.jpg" alt="" class="logo2 logo" />
+        </div>
+      </div>
+
+      <div class="step step3">
+        <div>
+          <img src="lpul.jpg" alt="" class="logo2 logo" />
+        </div>
+        <div class="contentworks">
+          <h3>LPU Laguna </h3>
+          <p>
+            Discover LPU Laguna’s diverse academic programs, modern facilities, and supportive community that fosters both personal and professional growth.
+          </p>
+          <button type="button" class="button2">Get Started</button>
+        </div>
+      </div>
+
+      <div class="step step4">
+        <div class="contentworks">
+          <h3>LPU Batangas</h3>
+          <p>Known for its strong programs in health sciences and hospitality.</p>
+
+          <button type="button" class="button2">Get Started</button>
+        </div>
+        <div>
+          <img src="lpub.jpg" alt="" class="logo2 logo" />
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="contact-section" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get in Touch with Us</h2>
+        <p class="section-description">We’re here to assist you! Reach out for admissions, inquiries, or campus information.</p>
+    
+        <div class="contact-details">
+          <div class="contact-info">
+            <h3>Our Location</h3>
+            <p>123 University Road, Laguna City, Philippines</p>
+          </div>
+    
+          <div class="contact-info">
+            <h3>Contact Number</h3>
+            <p>+63 123 456 7890</p>
+          </div>
+    
+          <div class="contact-info">
+            <h3>Email Us</h3>
+            <p><a href="mailto:info@lpu.edu.ph">info@lpu.edu.ph</a></p>
+          </div>
+        </div>
+    
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#" class="social-link">Facebook</a></li>
+            <li><a href="#" class="social-link">Twitter</a></li>
+            <li><a href="#" class="social-link">Instagram</a></li>
+            <li><a href="#" class="social-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
